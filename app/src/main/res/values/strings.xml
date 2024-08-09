@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kotlin ComposeView Fundamental</string>
+    <string name="text_style_label">Learn Text Style</string>
 </resources>
