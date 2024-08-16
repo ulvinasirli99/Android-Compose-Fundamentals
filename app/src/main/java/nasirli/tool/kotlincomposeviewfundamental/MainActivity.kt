@@ -5,6 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import nasirli.tool.kotlincomposeviewfundamental.screens.CardWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.ImageWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.LazyColumnWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.LazyGridWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.LazyRowWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.ScaffoldWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.StateAndReComposition
 import nasirli.tool.kotlincomposeviewfundamental.screens.SurfaceView
@@ -17,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinComposeViewFundamentalTheme {
-                ScaffoldWidget()
+                LazyGridWidget()
             }
         }
     }

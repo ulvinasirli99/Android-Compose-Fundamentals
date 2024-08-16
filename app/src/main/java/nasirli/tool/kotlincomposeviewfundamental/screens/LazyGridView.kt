@@ -5,4 +5,4 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun LottieAnimationWidget() {}
+fun LazyGridWidget() {}
