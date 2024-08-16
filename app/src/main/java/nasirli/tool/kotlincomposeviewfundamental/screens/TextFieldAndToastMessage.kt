@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -172,7 +174,10 @@ fun TextFieldAndToastMessage() {
                     unfocusedLeadingIconColor = Color.Gray,
                     unfocusedTrailingIconColor = Color.Black,
                     focusedIndicatorColor = Color.Green,
-                )
+                    containerColor = Color.Yellow.copy(.20f),
+                ),
+//                shape = CutCornerShape(22.dp)
+                shape = RoundedCornerShape(topStart = 15.dp, topEnd = 15.dp)
             )
         }
     }
