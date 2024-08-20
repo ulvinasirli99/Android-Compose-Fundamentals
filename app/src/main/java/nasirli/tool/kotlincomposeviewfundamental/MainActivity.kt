@@ -13,6 +13,9 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.BottomAppBarWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.BottomNavigationWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.DetailScreen
 import nasirli.tool.kotlincomposeviewfundamental.screens.LazyColumnWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.NestedLazyColumnWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.SearchWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.SwipeWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.TopAppBarWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.agesOfPeople
 import nasirli.tool.kotlincomposeviewfundamental.screens.namesOfPeople
@@ -23,24 +26,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinComposeViewFundamentalTheme {
-                val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "LazyColumnWidget") {
-                    composable(route = "LazyColumnWidget") {
-                        LazyColumnWidget(navController)
-                    }
-                    composable(route = "LazyColumnDetailWidget/{index}", arguments = listOf(
-                        navArgument(name = "index"){
-                            type = NavType.IntType
-                        }
-                    )) { index ->
-                        DetailScreen(
-                            itemIndex = index.arguments?.getInt("index") ?: 0,
-                            title = namesOfPeople,
-                            ages = agesOfPeople,
-                            modifier = Modifier,
-                        )
-                    }
-                }
+                SearchWidget()
+//                val navController = rememberNavController()
+//                NavHost(navController = navController, startDestination = "LazyColumnWidget") {
+//                    composable(route = "LazyColumnWidget") {
+//                        LazyColumnWidget(navController)
+//                    }
+//                    composable(route = "LazyColumnDetailWidget/{index}", arguments = listOf(
+//                        navArgument(name = "index"){
+//                            type = NavType.IntType
+//                        }
+//                    )) { index ->
+//                        DetailScreen(
+//                            itemIndex = index.arguments?.getInt("index") ?: 0,
+//                            title = namesOfPeople,
+//                            ages = agesOfPeople,
+//                            modifier = Modifier,
+//                        )
+//                    }
+//                }
             }
         }
     }
