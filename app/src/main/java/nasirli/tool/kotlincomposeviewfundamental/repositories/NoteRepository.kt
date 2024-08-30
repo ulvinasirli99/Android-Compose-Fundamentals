@@ -1,4 +1,4 @@
-package nasirli.tool.kotlincomposeviewfundamental.screens.viewmodel
+package nasirli.tool.kotlincomposeviewfundamental.repositories
 
 import nasirli.tool.kotlincomposeviewfundamental.screens.roomDB.Note
 import nasirli.tool.kotlincomposeviewfundamental.screens.roomDB.NoteDatabase

@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import nasirli.tool.kotlincomposeviewfundamental.repositories.NoteRepository
 import nasirli.tool.kotlincomposeviewfundamental.screens.roomDB.Note
-import kotlin.coroutines.coroutineContext
 
 class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
     fun getNotes() = repository.getAllNotes().asLiveData(viewModelScope.coroutineContext)
