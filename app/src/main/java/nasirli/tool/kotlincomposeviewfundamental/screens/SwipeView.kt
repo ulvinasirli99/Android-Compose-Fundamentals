@@ -88,7 +88,6 @@ fun SwipeWidget() {
                 }
             }, dismissContent = {
                 ItemUI(list = list, itemIndex = index)
-
             })
         }
     }
