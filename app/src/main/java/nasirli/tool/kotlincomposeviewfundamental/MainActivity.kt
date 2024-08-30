@@ -19,6 +19,7 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.ExpandableFloatingActio
 import nasirli.tool.kotlincomposeviewfundamental.screens.LazyColumnWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.LottieAnimationWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.NestedLazyColumnWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.PickImageWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.SearchWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.SwipeWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.TopAppBarWidget
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinComposeViewFundamentalTheme {
-                ExpandableFloatingActionWidget()
+                PickImageWidget()
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    WebViewWidget(Modifier.padding(innerPadding))
 //                }
