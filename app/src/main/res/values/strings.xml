@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Kotlin ComposeView Fundamental</string>
     <string name="text_style_label">Learn Text Style</string>
+    <string name="greeting">Hello my buddy !</string>
+    <string name="title">Test Title</string>
+    <string name="switch_language">Switch Language</string>
 </resources>

@@ -1,9 +1,15 @@
 package nasirli.tool.kotlincomposeviewfundamental
 
+import android.app.LocaleManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.os.LocaleList
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,11 +19,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.core.os.LocaleListCompat
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import nasirli.tool.kotlincomposeviewfundamental.screens.movie_app.navigation.MovieNavigation
+import nasirli.tool.kotlincomposeviewfundamental.screens.multilanguage.MultiLanguageApp
 import nasirli.tool.kotlincomposeviewfundamental.screens.viewmodel.MovieViewModel
 import nasirli.tool.kotlincomposeviewfundamental.ui.theme.KotlinComposeViewFundamentalTheme
+import org.intellij.lang.annotations.Language
 
 class MainActivity : ComponentActivity() {
 //    private val db by lazy {
@@ -39,6 +48,9 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        enableEdgeToEdge()
+
         setContent {
             KotlinComposeViewFundamentalTheme {
 
@@ -48,37 +60,38 @@ class MainActivity : ComponentActivity() {
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                 )
-                val linearGradientBrush = Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFFB226E1),
-                        Color(0xFFFC6603),
-                        Color(0xFF5995EE),
-                        Color(0xFF3D3535)
-                    ),
-                    start = Offset(Float.POSITIVE_INFINITY, 0f),
-                    end = Offset(0f, Float.POSITIVE_INFINITY),
-                )
+
+                MultiLanguageApp()
 
 
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-
-                    val movieViewModel = viewModel<MovieViewModel>()
-                    val state = movieViewModel.state
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .background(linearGradientBrush)
-                    ) {
-                        MovieNavigation()
-                    }
-
-
-                }
-
-
+//                val linearGradientBrush = Brush.linearGradient(
+//                    colors = listOf(
+//                        Color(0xFFB226E1),
+//                        Color(0xFFFC6603),
+//                        Color(0xFF5995EE),
+//                        Color(0xFF3D3535)
+//                    ),
+//                    start = Offset(Float.POSITIVE_INFINITY, 0f),
+//                    end = Offset(0f, Float.POSITIVE_INFINITY),
+//                )
+//
+//
+//                Surface(
+//                    modifier = Modifier.fillMaxSize(),
+//                    color = MaterialTheme.colorScheme.background
+//                ) {
+//
+//                    val movieViewModel = viewModel<MovieViewModel>()
+//                    val state = movieViewModel.state
+//                    Box(
+//                        modifier = Modifier
+//                            .fillMaxSize()
+//                            .background(linearGradientBrush)
+//                    ) {
+//                        MovieNavigation()
+//                    }
+//
+//                }
 
 
 //                RoomDatabaseView(viewModel, this)
@@ -106,4 +119,5 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
 }

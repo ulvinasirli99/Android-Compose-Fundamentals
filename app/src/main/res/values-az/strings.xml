@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kotlin ComposeView Fundamental</string>
+    <string name="text_style_label">Mətn üslubunu öyrənin</string>
+    <string name="greeting">Salam dostum!</string>
+    <string name="title">Test Başlığı</string>
+    <string name="switch_language">Dili dəyişdirin</string>
+</resources>
