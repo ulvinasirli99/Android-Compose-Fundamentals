@@ -21,7 +21,12 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.core.os.LocaleListCompat
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
+import nasirli.tool.kotlincomposeviewfundamental.screens.AnimatedTopBarWidget
+import nasirli.tool.kotlincomposeviewfundamental.screens.AudioPlayerScreen
+import nasirli.tool.kotlincomposeviewfundamental.screens.ComposeViewModel
+import nasirli.tool.kotlincomposeviewfundamental.screens.CountViewModel
 import nasirli.tool.kotlincomposeviewfundamental.screens.movie_app.navigation.MovieNavigation
 import nasirli.tool.kotlincomposeviewfundamental.screens.multilanguage.MultiLanguageApp
 import nasirli.tool.kotlincomposeviewfundamental.screens.viewmodel.MovieViewModel
@@ -61,7 +66,16 @@ class MainActivity : ComponentActivity() {
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                 )
 
-                MultiLanguageApp()
+                AudioPlayerScreen()
+
+//                val viewModel = ViewModelProvider(this)[CountViewModel::class.java]
+//                ComposeViewModel(viewModel)
+
+
+//                AnimatedTopBarWidget()
+
+
+//                MultiLanguageApp()
 
 
 //                val linearGradientBrush = Brush.linearGradient(
