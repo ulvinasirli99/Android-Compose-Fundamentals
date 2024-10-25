@@ -69,7 +69,6 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
 
     // Coil Compose
     implementation(libs.coil.compose)
@@ -93,9 +92,13 @@ dependencies {
     implementation (libs.androidx.lifecycle.viewmodel.compose)
 
     // Exo Player
-    implementation("androidx.media3:media3-exoplayer:1.4.1")
-    implementation("androidx.media3:media3-exoplayer-dash:1.4.1")
-    implementation("androidx.media3:media3-ui:1.4.1")
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.exoplayer.dash)
+    implementation(libs.androidx.media3.ui)
+
+    // Material 3
+    implementation(libs.androidx.material3)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

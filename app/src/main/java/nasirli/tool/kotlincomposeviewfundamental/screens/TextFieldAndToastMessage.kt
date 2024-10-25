@@ -7,13 +7,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.filled.Send
 import androidx.compose.material.icons.outlined.AccountCircle
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Check
@@ -37,7 +35,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
@@ -165,18 +162,14 @@ fun TextFieldAndToastMessage() {
                 trailingIcon = {
                     Icon(imageVector = Icons.AutoMirrored.Filled.Send, contentDescription = null)
                 },
-                colors = TextFieldDefaults.textFieldColors(
+                colors = TextFieldDefaults.colors(
                     unfocusedLabelColor = Color.Blue,
                     focusedLabelColor = Color.Cyan,
                     cursorColor = Color.Green,
-                    focusedLeadingIconColor = Color.Yellow,
                     unfocusedIndicatorColor = Color.Magenta,
-                    unfocusedLeadingIconColor = Color.Gray,
                     unfocusedTrailingIconColor = Color.Black,
                     focusedIndicatorColor = Color.Green,
-                    containerColor = Color.Yellow.copy(.20f),
                 ),
-//                shape = CutCornerShape(22.dp)
                 shape = RoundedCornerShape(topStart = 15.dp, topEnd = 15.dp)
             )
         }

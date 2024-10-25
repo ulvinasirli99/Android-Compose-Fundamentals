@@ -13,14 +13,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.SwipeToDismiss
+import androidx.compose.material3.SwipeToDismissBox
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -30,7 +26,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
@@ -39,7 +34,6 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.roomDB.Note
 import nasirli.tool.kotlincomposeviewfundamental.screens.viewmodel.NoteViewModel
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RoomDatabaseView(
     viewModel: NoteViewModel, componentActivity: ComponentActivity
@@ -101,7 +95,7 @@ fun RoomDatabaseView(
                     true
                 })
 
-                SwipeToDismiss(state = deleteState, background = {
+                SwipeToDismissBox(state = deleteState, backgroundContent = {
 
                     val color = when (deleteState.dismissDirection) {
 
@@ -118,7 +112,7 @@ fun RoomDatabaseView(
                             .background(color)
                             .padding(horizontal = 20.dp, vertical = 6.dp)
                     )
-                }, dismissContent = {
+                }, content = {
                     Column(Modifier.padding(10.dp)) {
                         Text(text = "Name : ${note.noteName}")
                         Spacer(modifier = Modifier.height(6.dp))

@@ -12,11 +12,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Card
-import androidx.compose.material3.DismissDirection
-import androidx.compose.material3.DismissValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.SwipeToDismiss
+import androidx.compose.material3.SwipeToDismissBox
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSwipeToDismissBoxState
@@ -31,7 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@OptIn(ExperimentalMaterial3Api::class)
+
 @Composable
 @Preview(showBackground = true)
 fun SwipeWidget() {
@@ -63,7 +61,7 @@ fun SwipeWidget() {
                     true
                 }
             )
-            SwipeToDismiss(state = state, background = {
+            SwipeToDismissBox(state = state, backgroundContent = {
                 val color = when (state.dismissDirection) {
                     SwipeToDismissBoxValue.EndToStart -> Color.Red
 
@@ -86,7 +84,7 @@ fun SwipeWidget() {
                         modifier = Modifier.align(Alignment.CenterStart)
                     )
                 }
-            }, dismissContent = {
+            }, content = {
                 ItemUI(list = list, itemIndex = index)
             })
         }

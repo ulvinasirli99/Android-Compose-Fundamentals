@@ -27,8 +27,10 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.AnimatedTopBarWidget
 import nasirli.tool.kotlincomposeviewfundamental.screens.AudioPlayerScreen
 import nasirli.tool.kotlincomposeviewfundamental.screens.ComposeViewModel
 import nasirli.tool.kotlincomposeviewfundamental.screens.CountViewModel
+import nasirli.tool.kotlincomposeviewfundamental.screens.ImageCarouselView
 import nasirli.tool.kotlincomposeviewfundamental.screens.movie_app.navigation.MovieNavigation
 import nasirli.tool.kotlincomposeviewfundamental.screens.multilanguage.MultiLanguageApp
+import nasirli.tool.kotlincomposeviewfundamental.screens.sampleImages
 import nasirli.tool.kotlincomposeviewfundamental.screens.viewmodel.MovieViewModel
 import nasirli.tool.kotlincomposeviewfundamental.ui.theme.KotlinComposeViewFundamentalTheme
 import org.intellij.lang.annotations.Language
@@ -66,7 +68,9 @@ class MainActivity : ComponentActivity() {
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                 )
 
-                AudioPlayerScreen()
+                ImageCarouselView(images = sampleImages)
+
+//                AudioPlayerScreen()
 
 //                val viewModel = ViewModelProvider(this)[CountViewModel::class.java]
 //                ComposeViewModel(viewModel)

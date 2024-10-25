@@ -73,7 +73,7 @@ fun TopAppBarWidget() {
                         }
                     }
                 },
-                colors = TopAppBarDefaults.smallTopAppBarColors(
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = Color(0xffe0a9a5),
                 )
             )
