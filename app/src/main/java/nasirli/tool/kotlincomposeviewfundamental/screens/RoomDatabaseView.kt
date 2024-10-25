@@ -34,6 +34,7 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.roomDB.Note
 import nasirli.tool.kotlincomposeviewfundamental.screens.viewmodel.NoteViewModel
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RoomDatabaseView(
     viewModel: NoteViewModel, componentActivity: ComponentActivity

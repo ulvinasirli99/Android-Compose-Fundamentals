@@ -29,6 +29,7 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.ComposeViewModel
 import nasirli.tool.kotlincomposeviewfundamental.screens.CountViewModel
 import nasirli.tool.kotlincomposeviewfundamental.screens.ImageCarouselView
 import nasirli.tool.kotlincomposeviewfundamental.screens.NavigationDrawerMenu
+import nasirli.tool.kotlincomposeviewfundamental.screens.ScrollableColumn
 import nasirli.tool.kotlincomposeviewfundamental.screens.movie_app.navigation.MovieNavigation
 import nasirli.tool.kotlincomposeviewfundamental.screens.multilanguage.MultiLanguageApp
 import nasirli.tool.kotlincomposeviewfundamental.screens.sampleImages
@@ -69,7 +70,10 @@ class MainActivity : ComponentActivity() {
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                 )
 
-                NavigationDrawerMenu()
+                ScrollableColumn()
+
+
+//                NavigationDrawerMenu()
 
 
 //                ImageCarouselView(images = sampleImages)
