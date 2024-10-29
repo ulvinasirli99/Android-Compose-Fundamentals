@@ -31,6 +31,7 @@ import nasirli.tool.kotlincomposeviewfundamental.screens.ImageCarouselView
 import nasirli.tool.kotlincomposeviewfundamental.screens.NavigationDrawerMenu
 import nasirli.tool.kotlincomposeviewfundamental.screens.ScrollableColumn
 import nasirli.tool.kotlincomposeviewfundamental.screens.SwipableTabRow
+import nasirli.tool.kotlincomposeviewfundamental.screens.VideoPlayerView
 import nasirli.tool.kotlincomposeviewfundamental.screens.movie_app.navigation.MovieNavigation
 import nasirli.tool.kotlincomposeviewfundamental.screens.multilanguage.MultiLanguageApp
 import nasirli.tool.kotlincomposeviewfundamental.screens.sampleImages
@@ -71,7 +72,9 @@ class MainActivity : ComponentActivity() {
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                 )
 
-                SwipableTabRow()
+                VideoPlayerView()
+
+//                SwipableTabRow()
 
 //                ScrollableColumn()
 
